@@ -76,8 +76,8 @@ public class MyCanvas extends View {
         canvas.drawText("MINESWEEPER", 250, 100, textpaint);
         textpaint.setTextSize(50);
 
-        canvas.drawText("Score : " + score, 40, 200, textpaint);
-        canvas.drawText("Mines : " + level * 8, 40, 260, textpaint);
+        canvas.drawText("Score : " + score, 100, 200, textpaint);
+        canvas.drawText("Mines : " + level * 8,100, 260, textpaint);
         canvas.drawText("High Score : " + highScore, 650, 200, textpaint);
 
         canvas.drawRect(50, 500, 1050, 1500, borderpaint);
@@ -126,7 +126,7 @@ public class MyCanvas extends View {
                     } else {
                         // Increasing Score and marked block as open
 
-                        isOpened[i - 1][j] = true;
+                        isOpened[i][j] = true;
                     }
                     invalidate();
 
